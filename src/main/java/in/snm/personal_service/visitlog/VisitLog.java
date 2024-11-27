@@ -1,30 +1,29 @@
 package in.snm.personal_service.visitlog;
 
-import java.time.LocalDateTime;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import org.springframework.data.annotation.CreatedDate;
-
-import jakarta.persistence.Column;
+import in.snm.personal_service.base.BaseEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Entity
-public class VisitLog {
+@EntityListeners(AuditingEntityListener.class)
+public class VisitLog extends BaseEntity {
     @Id
     @GeneratedValue
     private Long id;
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime visitDate;
     private String ip;
     private String country;
     private String network;
