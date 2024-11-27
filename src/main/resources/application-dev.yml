@@ -4,7 +4,9 @@ application:
       secret-key: ${JWT_SECRET}
       access-expiration: 8640000
       refresh-expiration: 604800000
-
+  cors:
+    origins: http://localhost:4200,http://localhost:8080
+    
 server:
   port: 8088
 
