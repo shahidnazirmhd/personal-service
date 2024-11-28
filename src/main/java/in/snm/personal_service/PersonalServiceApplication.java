@@ -32,6 +32,7 @@ public class PersonalServiceApplication {
 					.email("admin@snm.personal")
 					.password(passwordEncoder.encode("passPersonalService"))
 					.role(Role.ADMIN)
+					.createdBy(0L)
 					.build();
 					
 					userRepository.save(adminUser);
