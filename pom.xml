@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>in.snm</groupId>
 	<artifactId>personal-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>personal-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
